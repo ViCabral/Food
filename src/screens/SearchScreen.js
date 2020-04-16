@@ -8,14 +8,16 @@ const SearchScreen = () => {
 
     return (
         <View>
-            <SearchBar term = {term} onTermChange = { newTerm => setTerm(newTerm)}/>
+            <SearchBar 
+                term = {term} 
+                onTermChange = { newTerm => setTerm(newTerm)}
+                onTermSubmit = {() => console.log('OK')}/>
             <Text>{term}</Text>
         </View>
     )
 };
 
 const styles = StyleSheet.create({
-
 
 });
 
