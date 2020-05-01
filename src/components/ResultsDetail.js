@@ -1,10 +1,10 @@
 import React from 'react';
 import {View, Text, Image ,StyleSheet} from 'react-native';
 
-const ResultsDetail = ({ result }) => {
+const ResultsDetail = ({ result, navigation }) => {
     
     return (
-        <View style = {styles.item}>
+        <View style = {styles.item}>   
             <Image style = {styles.image} source = {{ uri: result.image_url}}/>
             <Text style = {styles.name}>{result.name}</Text>
             <Text>{result.rating} Stars, {result.review_count} Reviews</Text>
@@ -19,8 +19,8 @@ const styles = StyleSheet.create({
         marginTop: 10
     },
     image: {
-        width: 150,
-        height: 100,
+        width: 200,
+        height: 150,
         borderRadius: 10,
         marginBottom: 5    
     },

@@ -23,9 +23,8 @@ const styles = StyleSheet.create({
     background: {
         backgroundColor: '#E8E8E8',
         height: 50,
-        marginHorizontal: 15,
+        margin: 15,
         borderRadius: 10,
-        margin: 20,
         flexDirection: 'row',
         alignItems: 'center'
     },
