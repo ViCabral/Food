@@ -12,7 +12,7 @@ const ShowResultsScreen = ({ navigation }) => {
         setResult(response.data);
     }
 
-    console.log(result);
+    console.log(result?.location?.display_address);
 
     useEffect(() => {
         getResult(id);
@@ -40,6 +40,15 @@ const ShowResultsScreen = ({ navigation }) => {
                 <Text style = {styles.text}>{result.rating} Stars, {result.review_count} Reviews</Text>
                 <Text style = {styles.text}>Price: {result.price}</Text>
                 <Text style = {styles.text}>Phone: {result.display_phone}</Text>
+
+                   
+                <FlatList
+                data = {result?.location?.display_address||[]}
+                keyExtractor = {location => location}
+                renderItem = {({item}) => {
+                    return <Text style = {styles.text}>{item}</Text>
+                }}
+                />
 
             </View>
         </View>
